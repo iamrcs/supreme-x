@@ -31,8 +31,6 @@
       margin: 2rem auto;
       padding: 0 1rem;
       background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     .article-header {
       text-align: center;
@@ -69,7 +67,7 @@
       text-align: justify;
     }
     .cta-box {
-      margin: 2rem 0;
+      margin: 2rem 0 3rem 0; /* top | right | bottom | left */
       padding: 1.5rem;
       background: var(--primary);
       color: #fff;
