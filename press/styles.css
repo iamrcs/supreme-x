@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0d0d0d;
+  color: #f1f1f1;
+  line-height: 1.6;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #111;
+  border-bottom: 2px solid #ff1e56;
+}
+
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.logo span {
+  color: #ff1e56;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #f1f1f1;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ff1e56;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #111, #1a1a1a);
+}
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  font-family: 'Orbitron', sans-serif;
+}
+.hero p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.press-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: grid;
+  gap: 25px;
+}
+
+.press-card {
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s;
+}
+.press-card:hover {
+  transform: translateY(-5px);
+}
+
+.press-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ff1e56;
+  font-family: 'Orbitron', sans-serif;
+}
+.meta {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+.press-card p {
+  color: #ddd;
+  margin-bottom: 15px;
+}
+.read-more {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #ff1e56;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+.read-more:hover {
+  background: #e01445;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #111;
+  border-top: 2px solid #ff1e56;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+footer a {
+  color: #ff1e56;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .press-card h2 {
+    font-size: 1.3rem;
+  }
+}
