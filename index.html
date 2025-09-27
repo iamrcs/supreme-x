@@ -41,7 +41,18 @@
   
   <link rel="stylesheet" href="style.css">
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Preconnect for faster DNS + TLS handshake -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Preload Google Fonts CSS -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<!-- Fallback for no-JS -->
+<noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</noscript>
 </head>
 <body>
 
@@ -135,6 +146,7 @@
 </body>
 
 </html>
+
 
 
 
