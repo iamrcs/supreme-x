@@ -89,12 +89,11 @@
       background: #c62828;
     }
     footer {
-      background: var(--primary);
-      color: #aaa;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-      font-size: 0.9rem;
+          text-align: center;
+  padding: 25px;
+  background-color: #111111;
+  font-size: 16px;
+  color: #888888;
     }
     @media (max-width: 768px) {
       header h1 { font-size: 1.5rem; }
