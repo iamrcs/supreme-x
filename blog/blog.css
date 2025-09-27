@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: #0d0d0d;
+  color: #f1f1f1;
+  line-height: 1.6;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #111;
+  border-bottom: 2px solid #ff1e56;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.logo span {
+  color: #ff1e56;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #f1f1f1;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ff1e56;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #111, #1a1a1a);
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-family: 'Orbitron', sans-serif;
+}
+.hero p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+.blog-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s;
+}
+.blog-card:hover {
+  transform: translateY(-8px);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 20px;
+}
+
+.blog-content h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-family: 'Orbitron', sans-serif;
+}
+.blog-content p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+.read-more {
+  display: inline-block;
+  padding: 8px 15px;
+  background: #ff1e56;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+.read-more:hover {
+  background: #e01445;
+}
+.meta {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #111;
+  border-top: 2px solid #ff1e56;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
