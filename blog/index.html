@@ -1,79 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Supreme X - Blog</title>
-  <link rel="stylesheet" href="blog.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supreme X - Blog</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <!-- Preconnect for faster DNS + TLS handshake -->
-<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: #0d0d0d;
+            color: #f1f1f1;
+            line-height: 1.6;
+        }
 
-<!-- Preload Google Fonts CSS -->
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background: #111;
+            border-bottom: 2px solid #ff1e56;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
 
-<!-- Fallback for no-JS -->
-<noscript>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-</noscript>
-  
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: #ff1e56;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #f1f1f1;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #ff1e56;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            margin-left: 15px;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: #f1f1f1;
+            border-radius: 2px;
+            transition: 0.4s;
+        }
+
+        .hamburger.open span:nth-child(1) {
+            transform: rotate(45deg) translateY(8px);
+        }
+
+        .hamburger.open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.open span:nth-child(3) {
+            transform: rotate(-45deg) translateY(-8px);
+        }
+
+        @media(max-width:768px) {
+            .nav-links {
+                position: absolute;
+                top: 65px;
+                right: 0;
+                background: #111;
+                flex-direction: column;
+                width: 220px;
+                padding: 20px;
+                display: none;
+                box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.6);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(to right, #111, #1a1a1a);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+
+        .blog-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 40px;
+        }
+
+        .blog-card {
+            background: #1a1a1a;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, opacity 0.5s ease;
+            opacity: 0;
+        }
+
+        .blog-card.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 20px;
+        }
+
+        .blog-content h2 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .blog-content p {
+            font-size: 1rem;
+            color: #ccc;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            display: inline-block;
+            padding: 8px 15px;
+            background: #ff1e56;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .read-more:hover {
+            background: #e01445;
+        }
+
+        .meta {
+            margin-top: 10px;
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+
+        .load-more {
+            display: block;
+            margin: 30px auto;
+            padding: 10px 18px;
+            font-size: 1rem;
+            background: #ff1e56;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .load-more:disabled {
+            background: #555;
+            cursor: not-allowed;
+        }
+
+        .no-more {
+            text-align: center;
+            margin: 30px;
+            font-size: 1rem;
+            color: #bbb;
+            display: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #111;
+            border-top: 2px solid #ff1e56;
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+
+        @media(max-width:768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <header class="header">
-    <div class="logo">Supreme <span>X</span></div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="team.html">Team</a></li>
-        <li><a href="gallery-index.html">Gallery</a></li>
-        <li><a href="blog.html" class="active">Blog</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header class="header">
+        <div class="logo">Supreme <span>X</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="gallery-index.html">Gallery</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </nav>
+    </header>
 
-  <section class="hero">
-    <h1>Supreme X Blog</h1>
-    <p>Insights, updates, and stories from the Supreme X team</p>
-  </section>
+    <section class="hero">
+        <h1>Supreme X Blog</h1>
+        <p>Insights, updates, and stories from the Supreme X team</p>
+    </section>
 
-  <section class="blog-container">
-    <!-- Blog Card 1 -->
-    <article class="blog-card">
-      <img src="https://img.itisuniqueofficial.com/?text=Custom%20Font&font=OpenSans.ttf&size=72&width=1280&height=720" alt="Blog 1">
-      <div class="blog-content">
-        <h2>Our Journey Begins</h2>
-        <p>How Supreme X was formed and the vision driving our team to build futuristic solutions...</p>
-        <a href="#" class="read-more">Read More</a>
-        <div class="meta">By <strong>Jaydatt Khodave</strong> • Jan 2025</div>
-      </div>
-    </article>
+    <section class="blog-container" id="blog-container"></section>
 
-    <!-- Blog Card 2 -->
-    <article class="blog-card">
-      <img src="https://img.itisuniqueofficial.com/?text=Custom%20Font&font=OpenSans.ttf&size=72&width=1280&height=720" alt="Blog 2">
-      <div class="blog-content">
-        <h2>Breaking Limits with Tech</h2>
-        <p>Exploring how innovative ideas and coding mastery shape the future of Supreme X projects...</p>
-        <a href="#" class="read-more">Read More</a>
-        <div class="meta">By <strong>Member 1</strong> • Feb 2025</div>
-      </div>
-    </article>
+    <button id="loadMore" class="load-more">Load More</button>
+    <div id="noMore" class="no-more">No more articles alive</div>
 
-    <!-- Blog Card 3 -->
-    <article class="blog-card">
-      <img src="https://img.itisuniqueofficial.com/?text=Custom%20Font&font=OpenSans.ttf&size=72&width=1280&height=720" alt="Blog 3">
-      <div class="blog-content">
-        <h2>Cyber Future</h2>
-        <p>A deep dive into cyber innovation and the Supreme X philosophy of creating beyond boundaries...</p>
-        <a href="#" class="read-more">Read More</a>
-        <div class="meta">By <strong>Member 2</strong> • Mar 2025</div>
-      </div>
-    </article>
-  </section>
+    <footer>
+        <p>© 2025 Supreme X | Built with passion by the Supreme X Team</p>
+    </footer>
 
-  <footer>
-    <p>© 2025 Supreme X | Built with passion by the Supreme X Team</p>
-  </footer>
+    <script>
+        const container = document.getElementById('blog-container');
+        const loadMoreBtn = document.getElementById('loadMore');
+        const noMoreText = document.getElementById('noMore');
+        let blogData = [];
+        let itemsPerLoad = 2;
+        let currentIndex = 0;
+        let loading = false;
+        let loadingDotsInterval;
+
+        function renderArticles() {
+            const slice = blogData.slice(currentIndex, currentIndex + itemsPerLoad);
+            slice.forEach((article, index) => {
+                const card = document.createElement('article');
+                card.classList.add('blog-card');
+                card.innerHTML = `
+          <img src="${article.image}" alt="${article.title}">
+          <div class="blog-content">
+            <h2>${article.title}</h2>
+            <p>${article.desc}</p>
+            <a href="${article.url}" class="read-more">Read More</a>
+            <div class="meta">By <strong>${article.author}</strong> • ${article.date}</div>
+          </div>
+        `;
+                container.appendChild(card);
+                setTimeout(() => card.classList.add('show'), 100 * index);
+            });
+            currentIndex += slice.length;
+            if (currentIndex >= blogData.length) {
+                loadMoreBtn.style.display = "none";
+                noMoreText.style.display = "block";
+            }
+        }
+
+        function startLoadingAnimation() {
+            let dots = 1;
+            loadMoreBtn.textContent = 'Loading';
+            loadingDotsInterval = setInterval(() => {
+                dots = (dots % 4) + 1;
+                loadMoreBtn.textContent = 'Loading' + '.'.repeat(dots);
+            }, 400);
+        }
+
+        function stopLoadingAnimation() {
+            clearInterval(loadingDotsInterval);
+            loadMoreBtn.textContent = 'Load More';
+        }
+
+        function loadArticles() {
+            if (loading) return;
+            loading = true;
+            loadMoreBtn.disabled = true;
+            startLoadingAnimation();
+            setTimeout(() => {
+                renderArticles();
+                stopLoadingAnimation();
+                loadMoreBtn.disabled = false;
+                loading = false;
+            }, 800);
+        }
+
+        fetch('blog-post-1.json')
+            .then(res => res.json())
+            .then(data => {
+                blogData = data;
+                loadArticles();
+            })
+            .catch(err => {
+                console.error(err);
+                noMoreText.style.display = "block";
+                noMoreText.textContent = "Error loading articles";
+                loadMoreBtn.style.display = "none";
+            });
+
+        loadMoreBtn.addEventListener('click', loadArticles);
+
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => { navLinks.classList.toggle('open'); hamburger.classList.toggle('open'); });
+    </script>
 </body>
+
 </html>
