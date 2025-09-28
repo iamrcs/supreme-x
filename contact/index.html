@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Supreme X</title>
+    <meta name="description" content="Contact Supreme X Team. Reach out to us for inquiries, feedback, or support.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@400;500;700&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@400;500;700&display=swap"
+            rel="stylesheet">
+    </noscript>
+
+    <style>
+        :root {
+            --bg-dark: #0d0d0d;
+            --accent: #e63946;
+            --accent-glow: #ff416c;
+            --text-light: #f1f1f1;
+            --input-bg: #1a1a1a;
+            --input-border: #444;
+            --success: #28a745;
+            --error: #c62828;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg-dark);
+            color: var(--text-light);
+            font-family: "Orbitron", sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            color: var(--accent);
+            animation: glitch 1.5s infinite;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #aaa;
+            font-family: "Roboto", sans-serif;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 500px;
+            gap: 1rem;
+        }
+
+        input,
+        textarea {
+            background: var(--input-bg);
+            border: 1px solid var(--input-border);
+            color: var(--text-light);
+            padding: 0.8rem 1rem;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: "Roboto", sans-serif;
+            transition: 0.3s;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 10px var(--accent-glow);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        button {
+            background: var(--accent);
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s ease, box-shadow 0.3s ease;
+            font-family: "Roboto", sans-serif;
+            text-transform: uppercase;
+        }
+
+        button:hover {
+            background: #c62828;
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        .official-email {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #ccc;
+            font-family: "Roboto", sans-serif;
+        }
+
+        footer {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: #555;
+        }
+
+        @keyframes glitch {
+            0% {
+                text-shadow: 2px 2px #00ffea, -2px -2px #ff00c1;
+            }
+
+            20% {
+                text-shadow: -2px -2px #00ffea, 2px 2px #ff00c1;
+            }
+
+            40% {
+                text-shadow: 2px -2px #00ffea, -2px 2px #ff00c1;
+            }
+
+            60% {
+                text-shadow: -2px 2px #00ffea, 2px -2px #ff00c1;
+            }
+
+            80% {
+                text-shadow: 2px 2px #00ffea, -2px -2px #ff00c1;
+            }
+
+            100% {
+                text-shadow: none;
+            }
+        }
+
+        @media (max-width:600px) {
+            h1 {
+                font-size: 3rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Contact</h1>
+    <h2>Get in Touch with Supreme X Team</h2>
+
+    <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+
+    <div class="official-email">
+        If you are an official person with any company or organization, please consider emailing us:
+        <strong>supremex@itisuniqueofficial.com</strong>
+    </div>
+
+    <footer>© 2025 Supreme X Team. All rights reserved.</footer>
+
+    <script>
+        /*
+          Encoded credentials provided as:
+            base64( hex( original_string ) )
+        
+          Your original values were encoded for you and inserted below.
+          Reminder: do NOT keep real bot tokens in client-side code for production.
+        */
+
+        /* ----------------- Encoded values (DO NOT reveal raw token here) ----------------- */
+        const ENCODED_BOT_TOKEN = "MzYzNzM4MzQzMTM1MzQzNzM5MzYzYTQxNDE0NTMxNjE2NzYxNjM1MjYxNjE1OTc5MzEyZDc4MzIzMzM1MzU2NTU1MzEzNjM3NDY3YTQxNDE0ODMxMzY2MzQ2MzA=";
+        const ENCODED_CHAT_ID = "MzUzOTM3MzMzMjM3MzgzNTMwMzk=";
+        /* ----------------------------------------------------------------------------------*/
+
+        const form = document.getElementById("contactForm");
+        const button = form.querySelector("button");
+
+        // Accessible status region for screen readers & UX
+        let statusRegion = document.getElementById("contactStatus");
+        if (!statusRegion) {
+            statusRegion = document.createElement("div");
+            statusRegion.id = "contactStatus";
+            statusRegion.setAttribute("aria-live", "polite");
+            statusRegion.style.position = "absolute";
+            statusRegion.style.left = "-9999px";
+            statusRegion.style.width = "1px";
+            statusRegion.style.height = "1px";
+            statusRegion.style.overflow = "hidden";
+            document.body.appendChild(statusRegion);
+        }
+
+        /* Decode base64-of-hex -> hex -> utf8 string */
+        function b64HexToString(b64) {
+            try {
+                // atob returns the hex string (because we base64-encoded the hex string)
+                const hex = atob(b64);
+                return hexToString(hex);
+            } catch (e) {
+                console.error("Decoding error:", e);
+                return null;
+            }
+        }
+
+        /* Convert hex string to raw UTF-8 string */
+        function hexToString(hex) {
+            if (!hex || hex.length % 2 !== 0) return null;
+            let out = "";
+            for (let i = 0; i < hex.length; i += 2) {
+                const code = parseInt(hex.substr(i, 2), 16);
+                out += String.fromCharCode(code);
+            }
+            try {
+                // handle multi-byte UTF-8 properly
+                return decodeURIComponent(escape(out));
+            } catch (e) {
+                // fallback if decodeURIComponent/escape not necessary
+                return out;
+            }
+        }
+
+        /* Decode credentials (do not log them) */
+        const botToken = b64HexToString(ENCODED_BOT_TOKEN);
+        const chatId = b64HexToString(ENCODED_CHAT_ID);
+
+        if (!botToken || !chatId) {
+            console.warn("Contact script: Bot token or chat id failed to decode. Check your encoded strings.");
+        }
+
+        /* Utility — animate button text with dots */
+        function startSendingAnimation(btn) {
+            let dots = 0;
+            btn.disabled = true;
+            const original = btn.innerText;
+            const interval = setInterval(() => {
+                dots = (dots + 1) % 5; // 0..4
+                btn.innerText = "Sending" + ".".repeat(dots);
+                btn.style.boxShadow = `0 0 ${6 + dots * 5}px #ff416c`;
+            }, 350);
+            return { interval, original };
+        }
+        function stopSendingAnimation(btn, interval, original) {
+            clearInterval(interval);
+            btn.innerText = original;
+            btn.disabled = false;
+            btn.style.boxShadow = "none";
+        }
+
+        /* Send function using POST (JSON) - better than GET query strings */
+        async function sendMessageToTelegram(token, chat_id, text) {
+            const url = `https://api.telegram.org/bot${token}/sendMessage`;
+            const payload = {
+                chat_id,
+                text,
+                parse_mode: "HTML"
+            };
+
+            // Use fetch with a timeout
+            const controller = new AbortController();
+            const timeout = setTimeout(() => controller.abort(), 15000); // 15s
+            try {
+                const res = await fetch(url, {
+                    method: "POST",
+                    body: JSON.stringify(payload),
+                    headers: { "Content-Type": "application/json" },
+                    signal: controller.signal
+                });
+                clearTimeout(timeout);
+                if (!res.ok) {
+                    // Try to parse response body for debugging (do not leak token)
+                    let bodyText = "";
+                    try { bodyText = await res.text(); } catch (e) { /* ignore */ }
+                    throw new Error(`HTTP ${res.status} ${res.statusText} ${bodyText ? "- " + bodyText : ""}`);
+                }
+                const json = await res.json();
+                if (!json || !json.ok) throw new Error("Telegram returned an error");
+                return json;
+            } catch (err) {
+                clearTimeout(timeout);
+                throw err;
+            }
+        }
+
+        /* Form submit handler */
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            // Basic validation (HTML required exists but re-check)
+            const name = form.name.value.trim();
+            const email = form.email.value.trim();
+            const message = form.message.value.trim();
+            if (!name || !email || !message) {
+                statusRegion.textContent = "Please fill in all required fields.";
+                return;
+            }
+
+            statusRegion.textContent = "Preparing message...";
+
+            // Start UX animation
+            const { interval, original } = startSendingAnimation(button);
+
+            // Build the message text (escape < & > for HTML parse)
+            function escapeHtml(s) {
+                return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+            }
+            const text = `📩 <b>New Contact Message</b>\n\n<b>Name:</b> ${escapeHtml(name)}\n<b>Email:</b> ${escapeHtml(email)}\n<b>Message:</b>\n${escapeHtml(message)}`;
+
+            try {
+                if (!botToken || !chatId) throw new Error("Missing credentials (decoded).");
+
+                await sendMessageToTelegram(botToken, chatId, text);
+
+                // Success UI
+                clearInterval(interval);
+                button.innerText = "Message Sent Successfully!";
+                button.style.background = "#28a745";
+                button.style.boxShadow = "0 0 20px #28a745";
+                form.reset();
+                statusRegion.textContent = "Message delivered. Thank you!";
+                // keep success UI for a short while, then restore
+                setTimeout(() => {
+                    stopSendingAnimation(button, interval, original);
+                    button.style.background = "var(--accent)";
+                    statusRegion.textContent = "";
+                }, 2500);
+
+            } catch (err) {
+                console.error("Send error:", err);
+                clearInterval(interval);
+                button.innerText = "Failed to Send!";
+                button.style.background = "#c62828";
+                button.style.boxShadow = "0 0 20px #c62828";
+                statusRegion.textContent = "Failed to send message. Please try again later or email supremex@itisuniqueofficial.com.";
+                setTimeout(() => {
+                    stopSendingAnimation(button, interval, original);
+                    button.style.background = "var(--accent)";
+                    statusRegion.textContent = "";
+                }, 3500);
+            }
+        });
+    </script>
+
+</body>
+
+</html>
