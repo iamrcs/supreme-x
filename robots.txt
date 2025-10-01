@@ -3,3 +3,4 @@ Allow: /
 
 Sitemap: https://sx.itisuniqueofficial.com/sitemap.xml
 Sitemap: https://sx.itisuniqueofficial.com/sitemap-biography.xml
+Sitemap: https://sx.itisuniqueofficial.com/sitemap-company.xml
