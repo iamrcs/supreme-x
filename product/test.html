@@ -74,8 +74,7 @@
       gap: 1rem;
     }
 
-    input,
-    textarea {
+    input {
       background: var(--input-bg);
       border: 1px solid var(--input-border);
       color: var(--text-light);
@@ -86,16 +85,10 @@
       transition: 0.3s;
     }
 
-    input:focus,
-    textarea:focus {
+    input:focus {
       outline: none;
       border-color: var(--accent);
       box-shadow: 0 0 10px var(--accent-glow);
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 120px;
     }
 
     button {
@@ -187,10 +180,6 @@
       required>
     <div id="contact-error" class="error-message">❌ Enter a valid number with country code (e.g. +919876543210)</div>
 
-    <!-- reCAPTCHA v2 -->
-    <div class="g-recaptcha" data-sitekey="6Lfa2iYmAAAAAF0ZToZ3UpYEtPToWuwt0rJ5u8gV"></div>
-    <div id="recaptcha-error" class="error-message">❌ Please complete the reCAPTCHA</div>
-
     <button type="submit">Buy for ₹309</button>
   </form>
 
@@ -203,8 +192,6 @@
 
   <!-- Razorpay -->
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-  <!-- reCAPTCHA -->
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
   <script>
     const successChatID = "-1002790516534";
@@ -227,17 +214,8 @@
     document.getElementById("payment-form").onsubmit = async function (e) {
       e.preventDefault();
 
-      const recaptchaResponse = grecaptcha.getResponse();
-      const errorMsg = document.getElementById("recaptcha-error");
       const contactError = document.getElementById("contact-error");
       const submitBtn = document.querySelector("#payment-form button");
-
-      if (!recaptchaResponse) {
-        errorMsg.style.display = "block";
-        return;
-      } else {
-        errorMsg.style.display = "none";
-      }
 
       const name = document.getElementById("name").value.trim();
       const email = document.getElementById("email").value.trim();
