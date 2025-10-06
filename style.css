@@ -196,4 +196,13 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+
+}
+
+header {
+  border-bottom: solid;
+}
+
+footer {
+  border-top: solid;
 }
