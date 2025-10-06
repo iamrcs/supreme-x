@@ -42,6 +42,7 @@
   </header>
 
   <main role="main" aria-label="Main Company Content">
+
     <!-- Sidebar Infobox -->
     <aside role="complementary" aria-label="Organization Infobox">
       <img src="https://cdn.jsdelivr.net/gh/iamrcs/supreme-x/assets/company/img/The_Blaze_Times.png"
@@ -58,7 +59,11 @@
           </tr>
           <tr>
             <th scope="row">Founder</th>
-            <td itemprop="founder"><a href='https://sx.itisuniqueofficial.com/biography/Jaydatt_Khodave'>Jaydatt Khodave</a></td>
+            <td itemprop="founder" itemscope itemtype="http://schema.org/Person">
+              <a href='https://sx.itisuniqueofficial.com/biography/Jaydatt_Khodave' itemprop="url">
+                <span itemprop="name">Jaydatt Khodave</span>
+              </a>
+            </td>
           </tr>
           <tr>
             <th scope="row">Parent Organization</th>
@@ -66,7 +71,7 @@
           </tr>
           <tr>
             <th scope="row">Industry</th>
-            <td>Technology | News | Tutorials | Reviews</td>
+            <td>Technology | News | Tutorials | Reviews</td> <!-- plain text only -->
           </tr>
           <tr>
             <th scope="row">Headquarters</th>
@@ -94,26 +99,26 @@
       <section class="active" role="region" aria-labelledby="about-heading">
         <h2 id="about-heading" tabindex="0">About</h2>
         <div class="content">
-          <p>
+          <p itemprop="description">
             <strong>The Blaze Times</strong> is a tech-focused online publication founded on 
-            <time datetime="2024-01-15">15 January 2024</time> by <strong>Jaydatt Khodave</strong>. 
-            Operated under the umbrella of <em>It Is Unique Official</em>, it provides coverage on 
+            <time datetime="2024-01-15">15 January 2024</time> by <strong itemprop="founder">Jaydatt Khodave</strong>. 
+            Operated under <em>It Is Unique Official</em>, it provides coverage on 
             <em>programming, software updates, smartphone reviews</em>, and the latest developments 
             in the digital and technology world.
           </p>
         </div>
       </section>
 
-      <!-- Focus -->
+      <!-- Focus & Content -->
       <section role="region" aria-labelledby="focus-heading">
         <h2 id="focus-heading" tabindex="0">Focus & Content</h2>
         <div class="content">
           <ul>
-            <li>Technology News & Updates</li>
-            <li>Programming Tutorials & Guides</li>
-            <li>Smartphone & Gadget Reviews</li>
-            <li>Software & Security Updates</li>
-            <li>Digital Trends & Insights</li>
+            <li itemprop="makesOffer">Technology News & Updates</li>
+            <li itemprop="makesOffer">Programming Tutorials & Guides</li>
+            <li itemprop="makesOffer">Smartphone & Gadget Reviews</li>
+            <li itemprop="makesOffer">Software & Security Updates</li>
+            <li itemprop="makesOffer">Digital Trends & Insights</li>
           </ul>
         </div>
       </section>
@@ -123,17 +128,17 @@
         <h2 id="contact-heading" tabindex="0">Contact</h2>
         <div class="content">
           <ul>
-            <li>Email: <a href="mailto:contact@theblazetimes.in">contact@theblazetimes.in</a></li>
-            <li>Website: <a href="https://www.theblazetimes.in">theblazetimes.in</a></li>
-            <li>Instagram: <a href="https://instagram.com/theblazetimes">@theblazetimes</a></li>
+            <li>Email: <a href="mailto:contact@theblazetimes.in" itemprop="email">contact@theblazetimes.in</a></li>
+            <li>Website: <a href="https://www.theblazetimes.in" itemprop="url">theblazetimes.in</a></li>
+            <li>Instagram: <a href="https://instagram.com/theblazetimes" itemprop="sameAs">@theblazetimes</a></li>
           </ul>
         </div>
       </section>
 
-      <!-- References (moved to bottom) -->
+      <!-- References -->
       <section role="region" aria-labelledby="references-heading">
-        <h2>References</h2>
-        <div class="content" style="max-height:none; opacity:1;">
+        <h2 id="references-heading">References</h2>
+        <div class="content" style="max-height:none;opacity:1;">
           <ul>
             <li><a href="https://www.crunchbase.com/organization/theblazetimes" target="_blank" rel="noopener">Crunchbase - The Blaze Times</a></li>
             <li><a href="https://yourstory.com/companies/the-blaze-times" target="_blank" rel="noopener">YourStory - The Blaze Times</a></li>
