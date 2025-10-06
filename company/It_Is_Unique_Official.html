@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" itemscope itemtype="http://schema.org/Organization">
+<html lang="en" itemscope itemtype="https://schema.org/Organization">
 
 <head>
   <meta charset="UTF-8" />
@@ -15,24 +15,82 @@
     content="It Is Unique Official is a Parbhani-based tech organization founded by Jaydatt Khodave. Offering web development, PWAs, automation, open-source contributions, and educational resources." />
 
   <!-- Open Graph -->
+  <meta property="og:type" content="organization" />
   <meta property="og:title" content="It Is Unique Official - Supreme X" />
   <meta property="og:description"
-    content="Discover It Is Unique Official: a trusted tech company founded in 2023 by Jaydatt Khodave, providing web development, PWAs, software, open-source tools, and digital consulting." />
-  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/iamrcs/supreme-x/assets/company/img/It_Is_Unique_Official.png" />
+    content="Discover It Is Unique Official — a trusted tech company founded in 2023 by Jaydatt Khodave, delivering web development, PWAs, automation, open-source tools, and digital consulting." />
+  <meta property="og:image"
+    content="https://cdn.jsdelivr.net/gh/iamrcs/supreme-x/assets/company/img/It_Is_Unique_Official.png" />
   <meta property="og:url" content="https://sx.itisuniqueofficial.com/company/It_Is_Unique_Official" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#0645ad" />
 
   <!-- Favicons -->
-  <link href='https://sx.itisuniqueofficial.com/favicon.ico' rel='icon' type='image/x-icon' />
-  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/iamrcs/supreme-x/icons/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/iamrcs/supreme-x/icons/favicon-32x32.png">
+  <link rel="icon" href="https://sx.itisuniqueofficial.com/favicon.ico" type="image/x-icon" />
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="https://cdn.jsdelivr.net/gh/iamrcs/supreme-x/icons/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://cdn.jsdelivr.net/gh/iamrcs/supreme-x/icons/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://cdn.jsdelivr.net/gh/iamrcs/supreme-x/icons/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="192x192"
-    href="https://cdn.jsdelivr.net/gh/iamrcs/supreme-x/icons/android-chrome-192x192.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/iamrcs/supreme-x/icons/apple-touch-icon.png">
+    href="https://cdn.jsdelivr.net/gh/iamrcs/supreme-x/icons/android-chrome-192x192.png" />
   <link rel="icon" type="image/png" sizes="512x512"
-    href="https://cdn.jsdelivr.net/gh/iamrcs/supreme-x/icons/android-chrome-512x512.png">
+    href="https://cdn.jsdelivr.net/gh/iamrcs/supreme-x/icons/android-chrome-512x512.png" />
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iamrcs/supreme-x/assets/company/styles.css" />
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "It Is Unique Official",
+    "alternateName": "IIUO",
+    "url": "https://www.itisuniqueofficial.com",
+    "logo": "https://cdn.jsdelivr.net/gh/iamrcs/supreme-x/assets/company/img/It_Is_Unique_Official.png",
+    "foundingDate": "2023-08-15",
+    "founder": {
+      "@type": "Person",
+      "name": "Jaydatt Khodave",
+      "url": "https://sx.itisuniqueofficial.com/biography/Jaydatt_Khodave"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ughda Mahadev Mandir, Karegaon Road, Mathura Nagar, Krishi Sarathi Colony",
+      "addressLocality": "Parbhani",
+      "addressRegion": "Maharashtra",
+      "postalCode": "431401",
+      "addressCountry": "India"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Support",
+      "email": "contact@itisuniqueofficial.com",
+      "url": "https://www.itisuniqueofficial.com/contact"
+    },
+    "sameAs": [
+      "https://www.itisuniqueofficial.com",
+      "https://instagram.com/itisuniqueofficial",
+      "https://github.com/itisuniqueofficial",
+      "https://www.crunchbase.com/organization/itisuniqueofficial",
+      "https://jsdl.in/DT-99IUU5IF3XS"
+    ],
+    "slogan": "Trusted Web Solutions & Open-Source Innovation",
+    "foundingLocation": {
+      "@type": "Place",
+      "name": "Parbhani, Maharashtra, India"
+    },
+    "knowsAbout": [
+      "Web Development",
+      "Progressive Web Apps",
+      "Automation",
+      "SEO Optimization",
+      "Open Source Software",
+      "Digital Consulting"
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -45,7 +103,7 @@
     <!-- Sidebar Infobox -->
     <aside role="complementary" aria-label="Organization Infobox">
       <img src="https://cdn.jsdelivr.net/gh/iamrcs/supreme-x/assets/company/img/It_Is_Unique_Official.png"
-        alt="It Is Unique Official Logo" itemprop="logo">
+        alt="It Is Unique Official Logo" itemprop="logo" loading="lazy" width="260" height="260">
       <table aria-label="Company Information" role="table">
         <tbody>
           <tr>
@@ -58,18 +116,20 @@
           </tr>
           <tr>
             <th scope="row">Founder</th>
-            <td itemprop="founder"><a href='https://sx.itisuniqueofficial.com/biography/Jaydatt_Khodave'>Jaydatt Khodave</a></td>
+            <td itemprop="founder">
+              <a href="https://sx.itisuniqueofficial.com/biography/Jaydatt_Khodave" rel="author">Jaydatt Khodave</a>
+            </td>
           </tr>
           <tr>
             <th scope="row">Industry</th>
-            <td>Web Development | Software | Open-Source</td>
+            <td>Web Development | Software | Open Source</td>
           </tr>
           <tr>
             <th scope="row">Headquarters</th>
-            <td itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <td itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
               <span itemprop="streetAddress">Ughda Mahadev Mandir, Karegaon Road, Mathura Nagar, Krishi Sarathi Colony</span>,
               <span itemprop="addressLocality">Parbhani</span>,
-              <span itemprop="addressRegion">Maharashtra</span>,
+              <span itemprop="addressRegion">Maharashtra</span> –
               <span itemprop="postalCode">431401</span>,
               <span itemprop="addressCountry">India</span>
             </td>
@@ -83,102 +143,85 @@
       <p class="branding">All rights reserved © It Is Unique Official</p>
     </aside>
 
-    <!-- Main Organization Profile -->
+    <!-- Company Article -->
     <article aria-label="Company Article">
-
       <!-- About -->
       <section class="active" role="region" aria-labelledby="about-heading">
         <h2 id="about-heading" tabindex="0">About</h2>
-        <div class="content">
-          <p>
-            <strong>It Is Unique Official</strong> is a tech organization based in Parbhani, Maharashtra, India. 
-            Founded by <strong>Jaydatt Khodave</strong> on <time datetime="2023-08-15">15 August 2023</time>, 
-            the company delivers expert <em>web development</em>, <em>blogging tools</em>, and <em>software solutions</em>. 
-            With a strong focus on <strong>open-source innovation</strong> and <strong>educational resources</strong>, 
-            the organization builds developer tools, shares knowledge, and provides scalable digital solutions.
-          </p>
-        </div>
+        <p>
+          <strong>It Is Unique Official</strong> is a Parbhani-based technology organization founded on
+          <time datetime="2023-08-15">15 August 2023</time> by <strong>Jaydatt Khodave</strong>.
+          The company specializes in <em>web development</em>, <em>automation</em>, and <em>open-source innovation</em>.
+          Through software solutions and educational resources, it empowers creators, students, and developers to build
+          impactful digital experiences.
+        </p>
       </section>
 
       <!-- Services -->
       <section role="region" aria-labelledby="services-heading">
         <h2 id="services-heading" tabindex="0">Services</h2>
-        <div class="content">
-          <ul>
-            <li>Custom Website Development & Optimization</li>
-            <li>Progressive Web Apps (PWAs) – with or without offline support</li>
-            <li>SEO Enhancements & Performance Tuning</li>
-            <li>Business Automation & Digital Consulting</li>
-            <li>Content Management Systems</li>
-            <li>UPI QR & Payment Solutions</li>
-            <li>Link Shorteners & APK Distribution Platforms</li>
-          </ul>
-        </div>
+        <ul>
+          <li>Custom Website Development &amp; Optimization</li>
+          <li>Progressive Web Apps (PWAs)</li>
+          <li>SEO Enhancements &amp; Performance Tuning</li>
+          <li>Automation Tools &amp; Digital Consulting</li>
+          <li>Content Management Systems (CMS)</li>
+          <li>UPI Payment &amp; QR Solutions</li>
+          <li>Link Shorteners &amp; APK Hosting Platforms</li>
+        </ul>
       </section>
 
-      <!-- Open Source & Education -->
+      <!-- Open Source -->
       <section role="region" aria-labelledby="opensource-heading">
-        <h2 id="opensource-heading" tabindex="0">Open-Source & Education</h2>
-        <div class="content">
-          <p>
-            The organization actively contributes to the <strong>open-source community</strong> with projects such as the 
-            <em>Telegram Storage Bot</em>, educational blogging templates, and digital tools. 
-            It also shares guides on <em>JavaScript, React, Node.js, reverse engineering</em>, and more, 
-            helping students and developers grow their skills.
-          </p>
-        </div>
+        <h2 id="opensource-heading" tabindex="0">Open Source &amp; Education</h2>
+        <p>
+          <strong>It Is Unique Official</strong> contributes to open-source through educational templates,
+          developer bots, and free resources such as the <em>Telegram Storage Bot</em>.
+          It also creates tutorials on <em>JavaScript, React, Node.js</em>, and modern web technologies
+          to help learners advance in programming and digital innovation.
+        </p>
       </section>
 
-      <!-- FAQs -->
+      <!-- FAQ -->
       <section role="region" aria-labelledby="faq-heading">
-        <h2 id="faq-heading" tabindex="0">Frequently Asked Questions (FAQs)</h2>
-        <div class="content">
-          <dl>
-            <dt>Where is It Is Unique Official located?</dt>
-            <dd>Headquartered at Ughda Mahadev Mandir, Karegaon Road, Parbhani, Maharashtra, India – 431401.</dd>
+        <h2 id="faq-heading" tabindex="0">Frequently Asked Questions</h2>
+        <dl>
+          <dt>Where is It Is Unique Official located?</dt>
+          <dd>Headquartered in Parbhani, Maharashtra, India (Postal Code: 431401).</dd>
 
-            <dt>Who is the founder?</dt>
-            <dd>Founded by <strong>Jaydatt Khodave</strong>, a self-taught developer born on 10 September 2006.</dd>
+          <dt>Who is the founder?</dt>
+          <dd>Founded by <strong>Jaydatt Khodave</strong>, a self-taught developer and entrepreneur.</dd>
 
-            <dt>Do you create PWAs without offline support?</dt>
-            <dd>Yes. PWAs can be developed without offline support for lightweight performance.</dd>
+          <dt>Do you create PWAs without offline support?</dt>
+          <dd>Yes. Lightweight, performance-focused PWAs can be created with or without offline capabilities.</dd>
 
-            <dt>How do I start a project?</dt>
-            <dd>Reach out via our <a href="https://www.itisuniqueofficial.com">website</a>, email, or social media. We'll discuss goals, propose a plan, and begin after agreement.</dd>
+          <dt>Do you serve international clients?</dt>
+          <dd>Yes. We provide remote development and consulting services globally.</dd>
 
-            <dt>Do you accept international clients?</dt>
-            <dd>Yes. We work with global clients remotely with transparent communication and on-time delivery.</dd>
-
-            <dt>Do you provide post-launch support?</dt>
-            <dd>Yes. We offer updates, bug fixes, and additional development upon request.</dd>
-          </dl>
-        </div>
+          <dt>Do you offer maintenance and post-launch support?</dt>
+          <dd>Yes. Regular updates, bug fixes, and feature enhancements are available post-launch.</dd>
+        </dl>
       </section>
 
       <!-- Contact -->
       <section role="region" aria-labelledby="contact-heading">
         <h2 id="contact-heading" tabindex="0">Contact</h2>
-        <div class="content">
-          <ul>
-            <li>Email: <a href="mailto:contact@itisuniqueofficial.com">contact@itisuniqueofficial.com</a></li>
-            <li>Website: <a href="https://www.itisuniqueofficial.com">itisuniqueofficial.com</a></li>
-            <li>GitHub: <a href="https://github.com/itisuniqueofficial">github.com/itisuniqueofficial</a></li>
-            <li>Instagram: <a href="https://instagram.com/itisuniqueofficial">@itisuniqueofficial</a></li>
-          </ul>
-        </div>
+        <ul>
+          <li>Email: <a href="mailto:contact@itisuniqueofficial.com">contact@itisuniqueofficial.com</a></li>
+          <li>Website: <a href="https://www.itisuniqueofficial.com">itisuniqueofficial.com</a></li>
+          <li>GitHub: <a href="https://github.com/itisuniqueofficial">github.com/itisuniqueofficial</a></li>
+          <li>Instagram: <a href="https://instagram.com/itisuniqueofficial">@itisuniqueofficial</a></li>
+        </ul>
       </section>
-      
+
       <!-- References -->
       <section role="region" aria-labelledby="references-heading">
         <h2 id="references-heading">References</h2>
-        <div class="content" style="max-height:none; opacity:1;">
-          <ul>
-            <li><a href="https://jsdl.in/DT-99IUU5IF3XS" target="_blank" rel="noopener">Justdial Listing - It Is Unique Official</a></li>
-            <li><a href="https://www.crunchbase.com/organization/itisuniqueofficial" target="_blank" rel="noopener">Crunchbase Profile - It Is Unique Official</a></li>
-          </ul>
-        </div>
+        <ul>
+          <li><a href="https://jsdl.in/DT-99IUU5IF3XS" target="_blank" rel="noopener">Justdial Listing - It Is Unique Official</a></li>
+          <li><a href="https://www.crunchbase.com/organization/itisuniqueofficial" target="_blank" rel="noopener">Crunchbase Profile - It Is Unique Official</a></li>
+        </ul>
       </section>
-      
     </article>
   </main>
 
@@ -186,6 +229,6 @@
     <p>&copy; 2025 Supreme X | Company Page | All Rights Reserved.</p>
   </footer>
 
-  <script src='https://cdn.jsdelivr.net/gh/iamrcs/supreme-x/assets/company/script.js'></script>
+  <script src="https://cdn.jsdelivr.net/gh/iamrcs/supreme-x/assets/company/script.js"></script>
 </body>
 </html>
