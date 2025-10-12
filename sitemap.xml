@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Primary Sub-Sitemaps -->
+  <sitemap>
+    <loc>https://sx.itisuniqueofficial.com/sitemap-biography.xml</loc>
+  </sitemap>
+
+  <sitemap>
+    <loc>https://sx.itisuniqueofficial.com/sitemap-company.xml</loc>
+  </sitemap>
+
+  <sitemap>
+    <loc>https://sx.itisuniqueofficial.com/sitemap-press.xml</loc>
+  </sitemap>
+
+  <sitemap>
+    <loc>https://sx.itisuniqueofficial.com/sitemap-gallery.xml</loc>
+  </sitemap>
+
+  <sitemap>
+    <loc>https://sx.itisuniqueofficial.com/sitemap-blog.xml</loc>
+  </sitemap>
+
+  <sitemap>
+    <loc>https://sx.itisuniqueofficial.com/sitemap-main.xml</loc>
+  </sitemap>
+
+</sitemapindex>
