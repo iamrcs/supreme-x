@@ -1,6 +1,13 @@
 User-agent: *
 Allow: /
 
+# Primary Sitemaps
 Sitemap: https://sx.itisuniqueofficial.com/sitemap.xml
+
+# Additional Sectional Sitemaps
 Sitemap: https://sx.itisuniqueofficial.com/sitemap-biography.xml
 Sitemap: https://sx.itisuniqueofficial.com/sitemap-company.xml
+Sitemap: https://sx.itisuniqueofficial.com/sitemap-press.xml
+Sitemap: https://sx.itisuniqueofficial.com/sitemap-gallery.xml
+Sitemap: https://sx.itisuniqueofficial.com/sitemap-blog.xml
+Sitemap: https://sx.itisuniqueofficial.com/sitemap-main.xml
