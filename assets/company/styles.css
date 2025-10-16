@@ -8,6 +8,8 @@
     --max-width: 1100px;
     --link-color: #0645ad;
     --link-hover: #0b0080;
+    --accent: #0645ad;
+    --highlight: #eaf2ff;
     --transition: all 0.3s ease;
 }
 
@@ -20,9 +22,11 @@
         --text-muted: #aaa;
         --link-color: #66aaff;
         --link-hover: #99ccff;
+        --highlight: #1f2a3d;
     }
 }
 
+/* ============ BASE STYLES ============ */
 html {
     scroll-behavior: smooth;
 }
@@ -39,13 +43,11 @@ body {
     color: var(--text-main);
     overflow-wrap: break-word;
     word-break: normal;
-    scroll-behavior: smooth;
 }
 
 a {
     color: var(--link-color);
     text-decoration: none;
-    word-break: break-word;
 }
 
 a:hover,
@@ -54,6 +56,7 @@ a:focus {
     text-decoration: underline;
 }
 
+/* ============ HEADER / FOOTER ============ */
 header,
 footer {
     background: var(--bg-light);
@@ -82,6 +85,7 @@ footer {
     border-top: 1px solid var(--border);
 }
 
+/* ============ MAIN LAYOUT ============ */
 main {
     display: flex;
     gap: 2rem;
@@ -96,6 +100,7 @@ article {
     min-width: 280px;
 }
 
+/* Section Headings (collapsible look) */
 article h2 {
     font-size: 1.4rem;
     margin-top: 2rem;
@@ -120,6 +125,7 @@ article h2.active::after {
     transform: rotate(-180deg);
 }
 
+/* Collapsible Sections */
 article section[role="region"] .content {
     max-height: 0;
     overflow: hidden;
@@ -141,6 +147,7 @@ article ul {
     padding-left: 1.6rem;
 }
 
+/* ============ ASIDE INFOBOX ============ */
 aside {
     flex: 1 1 30%;
     min-width: 260px;
@@ -158,28 +165,38 @@ aside img {
     border-bottom: 1px solid var(--border);
 }
 
+/* Enhanced Table Styling */
 aside table {
     width: 100%;
     border-collapse: collapse;
     font-size: 0.95rem;
-    display: block;
     overflow-x: auto;
+    display: block;
 }
 
-aside table th {
-    background: var(--bg-light);
-    font-weight: bold;
+aside caption {
+    caption-side: top;
     text-align: left;
-    padding: 8px 10px;
-    border-bottom: 1px solid var(--border);
-    width: 10%;
-    vertical-align: top;
-    color: var(--text-main);
+    font-weight: 600;
+    padding: 0.6rem;
+    color: var(--text-muted);
 }
 
+aside table th,
 aside table td {
     padding: 8px 10px;
     border-bottom: 1px solid var(--border);
+}
+
+aside table th {
+    background: var(--highlight);
+    font-weight: bold;
+    text-align: left;
+    color: var(--text-main);
+}
+
+aside table tr:nth-child(even) {
+    background: rgba(0, 0, 0, 0.02);
 }
 
 aside table tr:hover {
@@ -187,26 +204,22 @@ aside table tr:hover {
     transition: background-color 0.2s;
 }
 
-aside .infobox-section {
-    border-top: 1px solid var(--border);
-    padding: 0.6rem 0.8rem 0.8rem;
-}
-
-@media (min-width:900px) {
+/* Sticky Sidebar */
+@media (min-width: 900px) {
     aside {
         position: sticky;
         top: 2rem;
     }
 }
 
+/* Responsive Layouts */
 @media (max-width: 900px) {
     main {
         flex-direction: column;
     }
-
     aside {
         max-width: 500px;
-        margin: 0 auto 1.5rem auto;
+        margin: 0 auto 1.5rem;
     }
 }
 
@@ -219,77 +232,47 @@ aside .infobox-section {
         font-size: 1.8rem;
     }
 
-    aside img {
-        margin: 0 auto;
-        display: block;
-    }
-
     article h2 {
         font-size: 1.2rem;
     }
 }
 
+/* ============ PRINT STYLES ============ */
 @media print {
     body {
         background: #fff;
         color: #000;
         font-size: 12pt;
     }
-
-    header,
-    footer {
+    header, footer {
         background: none;
         border: none;
         padding: 0;
         text-align: left;
     }
-
-    header h1 {
-        font-size: 20pt;
-    }
-
-    header p {
-        font-size: 12pt;
-        color: #000;
-    }
-
-    main {
-        display: block;
-        margin: 0;
-        padding: 0;
-    }
-
+    main { display: block; margin: 0; padding: 0; }
     aside {
         float: right;
         margin: 0 0 1rem 1rem;
         width: 40%;
         font-size: 10pt;
     }
-
-    aside img {
-        max-width: 100%;
-    }
-
     article {
         width: 100%;
     }
-
     a::after {
         content: " (" attr(href) ")";
         font-size: 9pt;
     }
-
     .content {
         display: block !important;
         max-height: none !important;
         opacity: 1 !important;
     }
-
-    article h2::after {
-        display: none;
-    }
+    article h2::after { display: none; }
 }
 
+/* Branding */
 .branding {
     font-size: small;
     padding: 10px;
@@ -297,57 +280,37 @@ aside .infobox-section {
     text-align: center;
 }
 
+/* Focus outlines */
 h2:focus-visible {
     outline: 2px dashed var(--link-color);
     outline-offset: 4px;
 }
 
+/* Last section icon disabled */
 article section:last-child h2 {
     cursor: default;
 }
 
-/* =========================
-   Extra Semantic Elements
-   ========================= */
+/* ============ SEMANTIC ELEMENTS SUPPORT ============ */
 
-/* Definition lists */
-dl {
-    margin: 1rem 0;
-    padding: 0;
-}
-
-dt {
-    font-weight: 600;
-    margin-top: 0.6rem;
-    color: var(--text-main);
-}
-
-dd {
-    margin: 0 0 0.6rem 1.4rem;
-    color: var(--text-muted);
-}
+/* Definition Lists */
+dl { margin: 1rem 0; }
+dt { font-weight: 600; margin-top: 0.6rem; color: var(--text-main); }
+dd { margin: 0 0 0.6rem 1.4rem; color: var(--text-muted); }
 
 /* Blockquotes */
 blockquote {
     margin: 1.2rem 0;
     padding: 0.8rem 1rem;
-    border-left: 4px solid var(--link-color);
+    border-left: 4px solid var(--accent);
     background: var(--bg-light);
     font-style: italic;
     color: var(--text-muted);
 }
 
 /* Figures */
-figure {
-    margin: 1.5rem auto;
-    text-align: center;
-}
-
-figcaption {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    margin-top: 0.4rem;
-}
+figure { margin: 1.5rem auto; text-align: center; }
+figcaption { font-size: 0.9rem; color: var(--text-muted); margin-top: 0.4rem; }
 
 /* Highlight / Mark */
 mark {
@@ -365,7 +328,6 @@ code {
     border-radius: 4px;
     font-size: 0.95em;
 }
-
 pre {
     background: var(--bg-light);
     padding: 1rem;
@@ -376,12 +338,7 @@ pre {
     line-height: 1.5;
     border: 1px solid var(--border);
 }
-
-pre code {
-    background: none;
-    padding: 0;
-    border-radius: 0;
-}
+pre code { background: none; padding: 0; }
 
 /* Keyboard inputs */
 kbd {
@@ -393,15 +350,67 @@ kbd {
     font-size: 0.85em;
 }
 
-/* Abbreviation tooltip */
+/* Abbreviation */
 abbr[title] {
     border-bottom: 1px dotted var(--border);
     cursor: help;
 }
+
+/* Small Text */
+small { font-size: 0.85em; color: var(--text-muted); }
+
+/* Address */
+address {
+    font-style: normal;
+    background: var(--bg-light);
+    padding: 0.8rem 1rem;
+    border-left: 4px solid var(--accent);
+    border-radius: 4px;
+    color: var(--text-muted);
+    margin: 1rem 0;
+}
+
+/* Superscript/Subscript */
+sup, sub { font-size: 0.8em; line-height: 0; }
 
 /* Horizontal Rule */
 hr {
     border: none;
     border-top: 1px solid var(--border);
     margin: 2rem 0;
+}
+
+/* Details/Summary */
+details {
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 0.5rem 0.8rem;
+    margin: 1rem 0;
+}
+details summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--link-color);
+}
+details[open] summary {
+    color: var(--link-hover);
+}
+
+/* Progress & Meter */
+progress, meter {
+    width: 100%;
+    height: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0.5rem 0;
+}
+progress::-webkit-progress-bar,
+meter::-webkit-meter-bar {
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+}
+progress::-webkit-progress-value,
+meter::-webkit-meter-optimum-value {
+    background: var(--link-color);
 }
