@@ -30,4 +30,8 @@
     <loc>https://sx.itisuniqueofficial.com/sitemap-pdf.xml</loc>
   </sitemap>
 
+  <sitemap>
+    <loc>https://sx.itisuniqueofficial.com/sitemap-location.xml</loc>
+  </sitemap>
+
 </sitemapindex>
