@@ -1,14 +1,13 @@
-// Smooth collapsible sections
-const sections = document.querySelectorAll('article h2[tabindex="0"]');
-sections.forEach(h2 => {
+// Smooth collapsible sections with accessibility
+document.querySelectorAll('article h2[tabindex="0"]').forEach(h2 => {
     const content = h2.nextElementSibling;
     const section = h2.parentElement;
-    h2.addEventListener('click', toggleSection);
-    h2.addEventListener('keypress', e => {
-        if (e.key === 'Enter' || e.key === ' ') { toggleSection.call(h2, e); }
-    });
 
-    function toggleSection() {
+    // Initialize ARIA
+    h2.setAttribute('aria-expanded', section.classList.contains('active'));
+
+    // Function to toggle section
+    const toggleSection = () => {
         const expanded = h2.getAttribute('aria-expanded') === 'true';
         h2.setAttribute('aria-expanded', !expanded);
         h2.classList.toggle('active');
@@ -21,11 +20,25 @@ sections.forEach(h2 => {
             content.style.maxHeight = 0;
             content.style.opacity = 0;
         }
-    }
+    };
 
-    // Set initial active section height
+    // Click event
+    h2.addEventListener('click', toggleSection);
+
+    // Keyboard accessibility (Enter / Space)
+    h2.addEventListener('keypress', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleSection();
+        }
+    });
+
+    // Set initial height for active section
     if (section.classList.contains('active')) {
         content.style.maxHeight = content.scrollHeight + 'px';
         content.style.opacity = 1;
+    } else {
+        content.style.maxHeight = 0;
+        content.style.opacity = 0;
     }
 });
