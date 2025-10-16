@@ -12,3 +12,4 @@ Sitemap: https://sx.itisuniqueofficial.com/sitemap-gallery.xml
 Sitemap: https://sx.itisuniqueofficial.com/sitemap-blog.xml
 Sitemap: https://sx.itisuniqueofficial.com/sitemap-main.xml
 Sitemap: https://sx.itisuniqueofficial.com/sitemap-pdf.xml
+Sitemap: https://sx.itisuniqueofficial.com/sitemap-location.xml
